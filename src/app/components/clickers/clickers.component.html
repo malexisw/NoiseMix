@@ -1,0 +1,15 @@
+<div class="clickers">
+    <div class="content" *ngFor="let sound of sounds">
+        <div [ngClass]="btn(sound)" (click)="playAudio(sound)">
+            <div class="logo">
+                <fa-icon [icon]="sound.logo" size="5x"></fa-icon> 
+            </div>
+            <div class="name">
+                {{ sound.name }}
+            </div>
+        </div>
+        <div class="slider">
+            <mat-slider min="0" max="100" step="1" value="50" (change)="onChange($event,sound)"></mat-slider>
+        </div>
+    </div>
+</div>

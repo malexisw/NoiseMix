@@ -1,0 +1,62 @@
+.home{
+    width: 100%;
+
+    .title{
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        font-family: monospace;
+        font-size: 24px;
+    }
+
+    .clock{
+        position: relative;
+        top: 150px;
+        width: fit-content;
+        margin: auto;
+    
+        .time{
+            display: flex;
+            justify-content: center;
+        }
+        
+        .date{
+            display: flex;
+            justify-content: center;
+        
+            .day,.dayNum,.month{
+                font-size: 24px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 800px){
+    .home{
+        height: 100vh;
+    }
+    .hours,.minute,.second{
+        font-size: 72px;
+        font-weight: 700;
+        line-height: 75px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .home{
+        height: auto;
+    }
+    .hours,.minute,.second{
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 48px;
+    }
+}
+
+
+
+
+
+
+
