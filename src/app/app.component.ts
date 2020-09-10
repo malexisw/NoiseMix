@@ -25,9 +25,9 @@ export class AppComponent implements OnInit{
   public getBackground(){ 
     const date = new Date
     const hours = date.getHours()
-    if(hours >= 0 && hours <= 12){
+    if(hours >= 6 && hours <= 12){
       this.background = 'url(../assets/morning.jpg) no-repeat'
-    } else if (hours >= 13 && hours <= 18){
+    } else if (hours >= 13 && hours <= 20){
       this.background = 'url(../assets/afternoon.jpg) no-repeat'
     } else {
       this.background = 'url(../assets/nightfall.jpg) no-repeat'
