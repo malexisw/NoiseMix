@@ -27,19 +27,27 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
+    //set the date
     this.updateDate(this.date)
 
+    //modify the date every 1000ms
     setInterval(() => {
       const date = new Date
       this.updateDate(date)
     }, 1000)
 
+    //get the day
     this.dateDay = this.day[this.date.getDay()];
+
+    //get the number of the day
     this.dateNumDay = this.date.getDate();
+
+    //get the month
     this.dateMonth = this.month[this.date.getMonth()];
   
   }
 
+  //set the hour, minute, seconds of the day
   private updateDate(date: Date){
     this.dateHours = date.getHours()
 

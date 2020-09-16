@@ -15,14 +15,17 @@ export class ClickersComponent implements OnInit {
   constructor(private soundService: SoundService) { }
 
   ngOnInit(): void {
+    //initialise the sounds
     this.initSound()
   }
 
+  //create and get the sounds
   initSound(){
     this.soundService.createSound()
     this.sounds = this.soundService.getSound()
   }
 
+  //play the sound selected
   playAudio(sound: Sound){
       if(!sound.play){
         sound.audio.load();
@@ -37,12 +40,14 @@ export class ClickersComponent implements OnInit {
     this.setSound(sound)  
   }
 
+  //Change the volume on change
   onChange(evt, sound: Sound){
     sound.audio.volume = evt.value / 100;
     sound.volume = sound.audio.volume;
     this.setSound(sound)
   }
 
+  //modify the sound of the object to the sound selected 
   setSound(sound: Sound){
     for(let i=0;i<this.sounds.length;i++){
       if(this.sounds[i].name == sound.name){
@@ -51,6 +56,7 @@ export class ClickersComponent implements OnInit {
     }
   }
 
+  //get the volume of the sound selected
   getVolume(sound: Sound){
     for(let i=0;i<this.sounds.length;i++){
       if(this.sounds[i].name == sound.name){
@@ -59,6 +65,7 @@ export class ClickersComponent implements OnInit {
     }
   }
 
+  //modify the class when the sound is active or not
   btn(sound: Sound){
     if(!sound.play){
       return "btn disabled"

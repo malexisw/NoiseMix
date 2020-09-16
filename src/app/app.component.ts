@@ -15,6 +15,7 @@ export class AppComponent implements OnInit{
   constructor( @Inject(DOCUMENT) private _document: Document) {}
 
   ngOnInit() {
+    //initialise the background
     this.getBackground()
     
     this._document.querySelector("body").style.background = this.background
@@ -22,6 +23,7 @@ export class AppComponent implements OnInit{
     this._document.querySelector("body").style.backgroundAttachment = "fixed"
   }
 
+  //get the background depending on the hour of the day
   public getBackground(){ 
     const date = new Date
     const hours = date.getHours()
