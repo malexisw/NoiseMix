@@ -1,6 +1,13 @@
 # NoiseMix
 
-This project is a relax app where you can listen to some noises.
+## Description
 
-This was created with angular
+Noisemix is a relaxation app where the user choose which noise he want to listen and relax.
 
+## Techno
+
+AngularJS Javascript HTML5 CSS Sass Typescript Scss
+
+## Tools
+
+Visual Studio Code Font Awesome
